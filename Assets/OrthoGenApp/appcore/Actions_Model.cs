@@ -277,7 +277,7 @@ namespace orthogen
 
             Frame3f pivotF = new Frame3f(basePtS);
             pivotSO.SetLocalFrame(pivotF, CoordSpace.SceneCoords);
-            pivotSO.OriginalFrameS = pivotF;
+            pivotSO.InitialLegPtL = pivotF.Origin;
 
             AddNewLengthenOp(pivotSO);
 
@@ -299,7 +299,7 @@ namespace orthogen
 
             pivotSO.OnTransformModified += (so) => {
                 Frame3f newF = so.GetLocalFrame(CoordSpace.SceneCoords);
-                Vector3f dv = newF.Origin - pivotSO.OriginalFrameS.Origin;
+                Vector3f dv = newF.Origin - (Vector3f)pivotSO.InitialLegPtL;
                 double dt = -dv.y;
                 deformOp.LengthenDistance = dt;
             };

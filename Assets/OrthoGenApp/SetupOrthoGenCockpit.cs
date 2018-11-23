@@ -280,7 +280,7 @@ namespace orthogen
 
             // accept/cancel buttons need to be checked every frame because the CanApply state
             // could change at any time, and there is no event about it
-            cockpit.Context.RegisterEveryFrameAction(() => {
+            cockpit.Context.RegisterEveryFrameAction("update_buttons", () => {
                 if (cockpit.Context.ToolManager.ActiveRightTool != null) {
                     cancel_button.Enabled = true;
                     accept_button.Enabled = cockpit.Context.ToolManager.ActiveRightTool.CanApply;
@@ -429,10 +429,10 @@ namespace orthogen
                     }
 
                 } else if ( bCtrlDown && bShiftDown && OG.Model.HasSocket() ) {
-                    int debug = OG.Socket.SocketGenerator.DebugStep;
+                    int debug = OG.Socket.DeviceGenerator.DebugStep;
                     if (debug == int.MaxValue) debug = 0;
                     else debug = MathUtil.Clamp(debug + (int)sign, 0, 10);
-                    OG.Socket.SocketGenerator.DebugStep = debug;
+                    OG.Socket.DeviceGenerator.DebugStep = debug;
                 }
 
                 return true;

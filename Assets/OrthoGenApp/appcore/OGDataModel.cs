@@ -119,7 +119,7 @@ namespace orthogen
             // align frame w/ leg
             so.SetLocalFrame(leg.RectifiedSO.GetLocalFrame(CoordSpace.SceneCoords), CoordSpace.SceneCoords);
 
-            socket = new SocketModel(so, leg, trimline);
+            socket = new SocketModel(so, leg, trimline, SocketModel.ModelModes.Socket);
             socket.OnSocketUpdated += OG.notifySocketUpdated;
 
             OnDataModelModified?.Invoke(this, EventArgs.Empty);

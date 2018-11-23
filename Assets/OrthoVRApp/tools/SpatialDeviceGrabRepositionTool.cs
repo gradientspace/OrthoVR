@@ -39,6 +39,9 @@ namespace orthogen
             set { behaviors = value; }
         }
 
+        ParameterSet parameters = new ParameterSet();
+        public ParameterSet Parameters { get { return parameters; } }
+
         ToolIndicatorSet indicators;
 
         public SpatialDeviceScanAlignmentTool(FScene scene, SceneObject target)

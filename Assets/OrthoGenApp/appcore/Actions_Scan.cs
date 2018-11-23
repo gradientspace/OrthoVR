@@ -122,7 +122,7 @@ namespace orthogen
             editor.RemoveTriangles((tid) => { return selection.IsSelected(tid) == false; }, true);
             if ( OGActions.FillHoleInScan ) {
                 SmoothedHoleFill fill = new SmoothedHoleFill(mesh) {
-                    TargetEdgeLengthMM = 2.5f,
+                    TargetEdgeLength = 2.5f,
                     SmoothAlpha = 0.5f,
                     BorderHintTris = borderTris,
                     OffsetDirection = SceneTransforms.SceneToObjectN(so, upAxisS),
