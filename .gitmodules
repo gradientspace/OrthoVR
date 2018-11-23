@@ -16,3 +16,6 @@
 [submodule "Assets/gsGeometry"]
 	path = Assets/gsGeometry
 	url = https://github.com/gradientspace/gsGeometry
+[submodule "Assets/gsUnityVR"]
+	path = Assets/gsUnityVR
+	url = https://github.com/gradientspace/gsUnityVR
