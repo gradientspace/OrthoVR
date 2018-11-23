@@ -7,3 +7,6 @@
 [submodule "Assets/gsShapeModels"]
 	path = Assets/gsShapeModels
 	url = https://github.com/gradientspace/gsShapeModels
+[submodule "Assets/gsCore"]
+	path = Assets/gsCore
+	url = https://github.com/gradientspace/gsCore
