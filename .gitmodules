@@ -10,3 +10,6 @@
 [submodule "Assets/gsCore"]
 	path = Assets/gsCore
 	url = https://github.com/gradientspace/gsCore
+[submodule "Assets/gsBodyModelAppCore"]
+	path = Assets/gsBodyModelAppCore
+	url = https://github.com/gradientspace/gsBodyModelAppCore
