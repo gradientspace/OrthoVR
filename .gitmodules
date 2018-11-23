@@ -19,3 +19,6 @@
 [submodule "Assets/gsUnityVR"]
 	path = Assets/gsUnityVR
 	url = https://github.com/gradientspace/gsUnityVR
+[submodule "Assets/360-Capture-SDK"]
+	path = Assets/360-Capture-SDK
+	url = https://github.com/rms80/360-Capture-SDK
